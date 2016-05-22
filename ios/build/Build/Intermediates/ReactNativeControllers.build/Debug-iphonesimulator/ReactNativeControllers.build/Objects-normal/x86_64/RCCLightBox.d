@@ -1,0 +1,21 @@
+dependencies: \
+  /Users/Joe/GitHub/wp/node_modules/react-native-controllers/ios/RCCLightBox.m \
+  /Users/Joe/GitHub/wp/node_modules/react-native-controllers/ios/RCCLightBox.h \
+  /Users/Joe/GitHub/wp/node_modules/react-native-controllers/ios/RCCManager.h \
+  ../../react-native/React/Base/RCTBridgeModule.h \
+  ../../react-native/React/Base/RCTDefines.h \
+  ../../react-native/React/Base/RCTRootView.h \
+  ../../react-native/React/Base/RCTBridge.h \
+  ../../react-native/React/Base/RCTBridgeDelegate.h \
+  ../../react-native/React/Base/RCTFrameUpdate.h \
+  ../../react-native/React/Base/RCTInvalidating.h \
+  ../../react-native/React/Base/RCTJavaScriptExecutor.h \
+  ../../react-native/React/Base/RCTRootViewDelegate.h \
+  ../../react-native/React/Base/RCTConvert.h \
+  ../../react-native/React/Layout/Layout.h \
+  ../../react-native/React/Views/RCTAnimationType.h \
+  ../../react-native/React/Views/RCTBorderStyle.h \
+  ../../react-native/React/Views/RCTTextDecorationLineType.h \
+  ../../react-native/React/Base/RCTLog.h \
+  ../../react-native/React/Base/RCTAssert.h \
+  ../../react-native/React/Views/RCTPointerEvents.h
