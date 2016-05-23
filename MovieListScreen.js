@@ -7,7 +7,6 @@ var {
 	AppRegistry,
 	StyleSheet,
 	Text,
-	ScrollView,
 	TouchableOpacity,
 	TouchableHighlight,
 	StatusBar,
@@ -15,8 +14,8 @@ var {
 	View
 } = ReactNative;
 import Icon from 'react-native-vector-icons/FontAwesome';
+var HTMLView = require('react-native-htmlview')
 
-require('./LightBox');
 
 var Controllers = require('react-native-controllers');
 var {
@@ -28,18 +27,10 @@ var RefreshableListView = require("./Components/RefreshableListView");
 // var ActivityView = require("react-native-activity-view");
 
 
-var api = require("./Network/api.js");
-
 
 var MovieListScreen = React.createClass({
-	getInitialState: function() {
-		return({
-			isNavBarHidden : true,
-			topStoryIDs: null,
-			lastIndex: 0,
-			imageLoading: true
-		});
-	},
+
+
 	componentDidMount: function() {
 		Controllers.NavigationControllerIOS("movies_nav").setLeftButtons([{
 			title: "Categories",
@@ -50,50 +41,30 @@ var MovieListScreen = React.createClass({
 	},
 
 
-
-	onShowModalVcClick: async function() {
-		// defaults: Modal.showController('ModalScreenTester');
-		// this example shows animation type and passProps
-		Modal.showController('ModalScreenTester', 'slide-up', { greeting: 'hi there!' });
-	},
-
-	onShowModalMoreDrawerOptionsVcClick: async function() {
-		//Modal.showController('MoreDrawerScreenTester');
-		ControllerRegistry.setRootController('MoreDrawerScreenTester', 'slide-down', { greeting: 'how you doin?' });
-	},
-
-	onToggleTabBarClick: async function() {
-		this.setState({
-			tabBarHidden: !this.state.tabBarHidden
-		});
-		Controllers.TabBarControllerIOS("main").setHidden({hidden: this.state.tabBarHidden, animated: true});
-	},
-
-	onReplaceRootAnimatedClick: function() {
-		// this example shows animation type and passProps
-		ControllerRegistry.setRootController('ModalScreenTester', 'slide-down', { greeting: 'how you doin?' });
-	},
 	renderListViewRow: function(row){
-		return(
+		console.log(this.state);
+			return(
 			<View >
 				<TouchableHighlight underlayColor={'#f3f3f2'} onPress={()=>this.selectRow(row)}>
 					<View style={styles.articleContainer}>
 						<View style={styles.rowDetailsContainer}>
-							<Image resizeMode="cover" style={styles.featuredImage}
-								source={{uri: row.featured_image}}
-								 onLoadStart={() =>{console.log('start loading')}}
-								onLoadEnd={() => {console.log('loading finished')}}
-								/>
-							<Text style={styles.articleTitle}>
-									{row.title.rendered}
-								</Text>
-								<Text style={styles.articleTime} >
-									Posted by {row.author}, Category: {row.categories[0]}
-								</Text>
-								<Text style={styles.articleExcerpt}>
-									{row.excerpt.rendered}
-								</Text>
 
+								<Image resizeMode="cover" style={styles.featuredImage}
+									source={{uri: row.featured_image_url}}
+									 onLoadStart={() =>{console.log('start loading')}}
+									onLoadEnd={() => {console.log('loading finished')}}
+									/>
+								<Text style={styles.articleTitle}>
+										{row.title.rendered}
+									</Text>
+								<Text style={styles.articleTime} >
+									Posted by {row.author_name}, Category: {row.category_name[0].name}
+								</Text>
+								<View style={styles.articleExcerpt}>
+								<HTMLView
+									value =	{row.excerpt.rendered}
+								/>
+								</View>
 							</View>
 						</View>
 					</TouchableHighlight>
@@ -117,11 +88,6 @@ var MovieListScreen = React.createClass({
 			fetch(REQUEST_URL)
 			.then((response) => response.json())
 			.then((responseData) => {responseData.map((obj)=>{
-				fetch('http://jo.wtf/wp-json/wp/v2/media/'+obj.featured_media)
-				.then((responseMedia) => responseMedia.json())
-				.then((responseDataMedia) => {
-					obj.featured_image= responseDataMedia.guid.rendered;
-				})
 				rowsData.push(obj);
 				console.log(rowsData);
 			})
@@ -134,7 +100,7 @@ var MovieListScreen = React.createClass({
 	selectRow: function(row){
 		var navigationController = Controllers.NavigationControllerIOS("movies_nav");
 		navigationController.push({
-			component: "PushedScreen", // the unique ID registered with AppRegistry.registerComponent (required)
+			component: "ListViewSimpleExample", // the unique ID registered with AppRegistry.registerComponent (required)
 			backButtonTitle: "", // override the nav bar back button title for the pushed screen (optional)
 			backButtonHidden: false, // hide the nav bar back button for the pushed screen altogether (optional)
 		});
@@ -197,7 +163,6 @@ var styles = StyleSheet.create({
 	},
 	articleExcerpt: {
 		margin:10,
-		fontSize:14
 	},
 	articleActions: {
 		backgroundColor: '#FFFFFF',
