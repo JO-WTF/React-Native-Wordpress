@@ -104,7 +104,7 @@ var ListViewSimpleExample = React.createClass({
       <View style={styles.container}>
 				<ScrollView showsVerticalScrollIndicator={false}>
 				<HTMLView
-						value={htmlContent}
+						value={this.props.content}
 						stylesheet={styles}
 						onLinkPress={(url) => console.log('clicked link: ', url)}
 						/>

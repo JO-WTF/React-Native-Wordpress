@@ -103,6 +103,7 @@ var MovieListScreen = React.createClass({
 			component: "ListViewSimpleExample", // the unique ID registered with AppRegistry.registerComponent (required)
 			backButtonTitle: "", // override the nav bar back button title for the pushed screen (optional)
 			backButtonHidden: false, // hide the nav bar back button for the pushed screen altogether (optional)
+			passProps: {content:row.content.rendered}
 		});
 	},
 
