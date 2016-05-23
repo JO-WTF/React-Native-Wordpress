@@ -61,7 +61,7 @@ It is not finished yet.
 
 *	Article actions: comment, share, add to favorites;
 
-Second Screen:
+####Second Screen:
 
 *	What to put?
 
@@ -86,12 +86,14 @@ Second Screen:
 
 ## Instructions
 
-1. Install WP-API
+* Install WP-API on wordpress
 
-2. Add extra fields to WP-API output http://jo.wtf/adding-extra-fields-to-wp-api-output/
+* Add extra fields to WP-API output http://jo.wtf/adding-extra-fields-to-wp-api-output/
 
-3. $ npm install
+* Change the domain name in config.js
 
-4. $ npm run
+* `$ npm install`
 
-5. $ react-native run-ios
+* `$ npm run`
+
+* `$ react-native run-ios`
