@@ -1,21 +1,53 @@
-# Example Project
+## Wordpress App by React native
+It is not finished yet.
 
-This example is a demonstration of a project using the React Native Controllers npm package for creating a native skeleton for an iOS app. The app showcases the following native UI elements:
+Plugins in use:
+	"react-native-cli": "^0.2.0",
+	"react": "0.14.5",
+	"react-native": "0.25.1",
+	"react-native-activity-view": "^0.2.9",
+	"react-native-controllers": "latest",
+	"react-native-gifted-listview": "0.0.15",
+	"react-native-htmlview": "git+https://git@github.com/blackbing/react-native-htmlview.git#master",
+	"react-native-vector-icons": "^2.0.2",
+	"react-native-refreshable-listview": "^1.3.0"
 
-* Side menu drawer
-* Tab bar
-* Navigation bar
- 
-## Running this app
- 
-Before running this app, make sure you ran:
-```
-cd example
-npm install
-```
 
-Mac and Xcode are required.
-* Open `example/ios/ControllersExample.xcodeproj` in Xcode
-* Hit the Run button
+## TODOs
 
-See [Running on device](https://facebook.github.io/react-native/docs/running-on-device-ios.html) if you want to use a physical device.
+First Screen:
+	Update API to fetch correct posts;
+	Article action buttons;
+	Image placeholder;
+	Display data published;
+	Show "Last one" at the end of list;
+	Sidebar;
+	Auto load when reaching the bottom?
+
+Post Screen:
+	Window title;
+	Right sidebar (with what?);
+	Post title;
+	Post meta;
+	Deal with links;
+	Deal with images;
+	Deal with code;
+	Comment list;
+	Article actions: comment, share, add to favorites;
+
+Second Screen:
+	What to put?
+
+Third Screen:
+	What to put?
+
+Clean up
+	Delete js files;
+	Change file and class names;
+
+## Instructions
+1. Install WP-API
+2. Add extra fields to WP-API output http://jo.wtf/adding-extra-fields-to-wp-api-output/
+3. $ npm install
+4. $ npm run
+5. $ react-native run-ios
