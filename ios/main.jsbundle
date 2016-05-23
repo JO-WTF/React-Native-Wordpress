@@ -1342,7 +1342,7 @@ React.ControllerRegistry;var TabBarControllerIOS=React.TabBarControllerIOS;var N
 
 
 require(553 /* ./SideMenu */);
-require(554 /* ./MovieListScreen */);
+require(554 /* ./PostListScreen */);
 require(676 /* ./MoreDrawerOptionsScreen */);
 require(678 /* ./SearchScreen */);
 require(679 /* ./FavoritesScreen */);
@@ -1350,7 +1350,7 @@ require(680 /* ./ExtraScreen */);
 require(681 /* ./ModalScreen */);
 require(683 /* ./StyledTabScreen */);
 
-var MoviesApp=Controllers.createClass({
+var RNWordpress=Controllers.createClass({
 
 render:function render(){
 return (
@@ -1363,7 +1363,7 @@ React.createElement(TabBarControllerIOS,{id:'main',__source:{fileName:_jsxFileNa
 React.createElement(TabBarControllerIOS.Item,{title:'Recent Posts',icon:require(689 /* ./img/home.png */),selectedIcon:require(690 /* ./img/home_selected.png */),__source:{fileName:_jsxFileName,lineNumber:34}},
 React.createElement(NavigationControllerIOS,{
 title:'Recent Posts',
-component:'MovieListScreen',
+component:'PostListScreen',
 id:'movies_nav',
 style:{statusBarTextColorScheme:'light',navBarBackgroundColor:'#0088CC',navBarTextColor:'#ffffff',navBarButtonColor:'#ffffff',drawUnderNavBar:false,drawUnderTabBar:true},__source:{fileName:_jsxFileName,lineNumber:35}})),
 
@@ -1390,11 +1390,11 @@ style:{drawUnderTabBar:true},__source:{fileName:_jsxFileName,lineNumber:52}}))))
 
 
 
-ControllerRegistry.registerController('MoviesApp',function(){return MoviesApp;});
+ControllerRegistry.registerController('RNWordpress',function(){return RNWordpress;});
 
-ControllerRegistry.setRootController('MoviesApp');
+ControllerRegistry.setRootController('RNWordpress');
 
-module.exports=MoviesApp;
+module.exports=RNWordpress;
 });
 __d(11 /* react-native-controllers/index.js */, function(global, require, module, exports) {var OriginalReactNative=require(12 /* react-native */);
 var RCCManager=OriginalReactNative.NativeModules.RCCManager;
@@ -70230,7 +70230,7 @@ AppRegistry.registerComponent('SideMenu',function(){return SideMenu;});
 
 module.exports=SideMenu;
 });
-__d(554 /* ControllersExample/MovieListScreen.js */, function(global, require, module, exports) {'use strict';var _jsxFileName='/Users/Joe/GitHub/wp/MovieListScreen.js';
+__d(554 /* ControllersExample/PostListScreen.js */, function(global, require, module, exports) {'use strict';var _jsxFileName='/Users/Joe/GitHub/wp/PostListScreen.js';
 
 
 
@@ -70245,7 +70245,7 @@ __d(554 /* ControllersExample/MovieListScreen.js */, function(global, require, m
 
 
 
-var _FontAwesome=require(555 /* react-native-vector-icons/FontAwesome */);var _FontAwesome2=babelHelpers.interopRequireDefault(_FontAwesome);require(666 /* ./PushedScreen */);var React=require(381 /* react */);var ReactNative=require(12 /* react-native */);var AppRegistry=ReactNative.AppRegistry;var StyleSheet=ReactNative.StyleSheet;var Text=ReactNative.Text;var TouchableOpacity=ReactNative.TouchableOpacity;var TouchableHighlight=ReactNative.TouchableHighlight;var StatusBar=ReactNative.StatusBar;var Image=ReactNative.Image;var View=ReactNative.View;
+var _FontAwesome=require(555 /* react-native-vector-icons/FontAwesome */);var _FontAwesome2=babelHelpers.interopRequireDefault(_FontAwesome);require(666 /* ./PostScreen */);var React=require(381 /* react */);var ReactNative=require(12 /* react-native */);var AppRegistry=ReactNative.AppRegistry;var StyleSheet=ReactNative.StyleSheet;var Text=ReactNative.Text;var TouchableOpacity=ReactNative.TouchableOpacity;var TouchableHighlight=ReactNative.TouchableHighlight;var StatusBar=ReactNative.StatusBar;var Image=ReactNative.Image;var View=ReactNative.View;
 var HTMLView=require(669 /* react-native-htmlview */);
 
 
@@ -70260,7 +70260,7 @@ var RefreshableListView=require(675 /* ./Components/RefreshableListView */);
 
 
 
-var MovieListScreen=React.createClass({displayName:'MovieListScreen',
+var PostListScreen=React.createClass({displayName:'PostListScreen',
 
 
 componentDidMount:function componentDidMount(){
@@ -70420,9 +70420,9 @@ borderTopWidth:1}});
 
 console.disableYellowBox=true;
 
-AppRegistry.registerComponent('MovieListScreen',function(){return MovieListScreen;});
+AppRegistry.registerComponent('PostListScreen',function(){return PostListScreen;});
 
-module.exports=MovieListScreen;
+module.exports=PostListScreen;
 });
 __d(555 /* react-native-vector-icons/FontAwesome.js */, function(global, require, module, exports) {var _createIconSet=require(556 /* ./lib/create-icon-set */);var _createIconSet2=babelHelpers.interopRequireDefault(_createIconSet);
 
@@ -74536,7 +74536,7 @@ this.updateIconSources(nextProps);}}}},{key:'render',value:function render()
 {
 return _react2.default.createElement(_reactNative.ToolbarAndroid,babelHelpers.extends({},this.props,this.state,{__source:{fileName:_jsxFileName,lineNumber:78}}));}}]);return IconToolbarAndroid;}(_react.Component),_class.propTypes={navIconName:IconNamePropType,overflowIconName:IconNamePropType,actions:_react.PropTypes.arrayOf(_react.PropTypes.shape({title:_react.PropTypes.string.isRequired,iconName:IconNamePropType,iconSize:_react.PropTypes.number,iconColor:_react.PropTypes.string,show:_react.PropTypes.oneOf(['always','ifRoom','never']),showWithText:_react.PropTypes.bool})),iconSize:_react.PropTypes.number,iconColor:_react.PropTypes.string},_class.defaultProps={iconSize:24},_temp;}
 });
-__d(666 /* ControllersExample/PushedScreen.js */, function(global, require, module, exports) {'use strict';var _jsxFileName='/Users/Joe/GitHub/wp/PushedScreen.js';
+__d(666 /* ControllersExample/PostScreen.js */, function(global, require, module, exports) {'use strict';var _jsxFileName='/Users/Joe/GitHub/wp/PostScreen.js';
 
 var React=require(381 /* react */);
 var ReactNative=require(12 /* react-native */);var 
@@ -83310,7 +83310,7 @@ backgroundColor:backgroundColor}});},
 
 
 onClosePressed:function onClosePressed(){
-ControllerRegistry.setRootController('MoviesApp','fade');},
+ControllerRegistry.setRootController('RNWordpress','fade');},
 
 
 onShowModalVcClick:function onShowModalVcClick(){return regeneratorRuntime.async(function onShowModalVcClick$(_context){while(1){switch(_context.prev=_context.next){case 0:
@@ -83789,10 +83789,10 @@ Controllers.NavigationControllerIOS("favorites_nav").pop();},
 onButtonClick:function onButtonClick(cmd){
 switch(cmd){
 case 'plain':
-require(666 /* ./PushedScreen */);
+require(666 /* ./PostScreen */);
 Controllers.NavigationControllerIOS("favorites_nav").push({
 title:"Pushed screen",
-component:"PushedScreen",
+component:"PostScreen",
 animated:true});
 
 break;

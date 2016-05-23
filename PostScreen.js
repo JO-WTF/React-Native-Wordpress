@@ -55,7 +55,7 @@ var HTMLView = require('react-native-htmlview')
 // }
 // }
 
-var ListViewSimpleExample = React.createClass({
+var PostScreen = React.createClass({
   /**
    * Will be called when refreshing
    * Should be replaced by your own logic
@@ -149,6 +149,6 @@ var styles = {
   },
 };
 
-AppRegistry.registerComponent('ListViewSimpleExample', () => ListViewSimpleExample);
+AppRegistry.registerComponent('PostScreen', () => PostScreen);
 
-module.exports = ListViewSimpleExample;
+module.exports = PostScreen;

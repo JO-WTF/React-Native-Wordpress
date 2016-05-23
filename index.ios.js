@@ -13,15 +13,11 @@ var {
 
 // require all top level react components you refer to in the layout
 require('./SideMenu');
-require('./MovieListScreen');
-require('./MoreDrawerOptionsScreen');
+require('./PostListScreen');
 require('./SearchScreen');
 require('./FavoritesScreen');
-require('./ExtraScreen');
-require('./ModalScreen');
-require('./StyledTabScreen');
 
-var MoviesApp = Controllers.createClass({
+var RNWordpress = Controllers.createClass({
 
   render: function() {
     return (
@@ -34,7 +30,7 @@ var MoviesApp = Controllers.createClass({
           <TabBarControllerIOS.Item title="Recent Posts" icon={require('./img/home.png')} selectedIcon={require('./img/home_selected.png')}>
             <NavigationControllerIOS
               title="Recent Posts"
-              component="MovieListScreen"
+              component="PostListScreen"
               id="movies_nav"
               style={{statusBarTextColorScheme:'light',navBarBackgroundColor: '#0088CC',navBarTextColor: '#ffffff',navBarButtonColor:'#ffffff', drawUnderNavBar: false, drawUnderTabBar: true}}
             />
@@ -61,8 +57,8 @@ var MoviesApp = Controllers.createClass({
 });
 
 
-ControllerRegistry.registerController('MoviesApp', () => MoviesApp);
+ControllerRegistry.registerController('RNWordpress', () => RNWordpress);
 // this line makes the app actually start and initialize
-ControllerRegistry.setRootController('MoviesApp');
+ControllerRegistry.setRootController('RNWordpress');
 
-module.exports = MoviesApp;
+module.exports = RNWordpress;

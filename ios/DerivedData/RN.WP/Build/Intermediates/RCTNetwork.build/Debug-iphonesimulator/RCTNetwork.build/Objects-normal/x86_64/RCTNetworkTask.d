@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/Joe/GitHub/wp/node_modules/react-native/Libraries/Network/RCTNetworkTask.m \
-  /Users/Joe/GitHub/wp/node_modules/react-native/Libraries/Network/RCTNetworkTask.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/Libraries/Network/RCTNetworkTask.m \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/Libraries/Network/RCTNetworkTask.h \
   ../../React/Base/RCTURLRequestDelegate.h \
   ../../React/Base/RCTURLRequestHandler.h \
   ../../React/Base/RCTBridgeModule.h ../../React/Base/RCTDefines.h \

@@ -1,5 +1,5 @@
 'use strict';
-require('./PushedScreen'); // help the react bundler understand we want this file included
+require('./PostScreen'); // help the react bundler understand we want this file included
 
 var React = require('react');
 var ReactNative = require('react-native');
@@ -28,7 +28,7 @@ var RefreshableListView = require("./Components/RefreshableListView");
 
 
 
-var MovieListScreen = React.createClass({
+var PostListScreen = React.createClass({
 
 
 	componentDidMount: function() {
@@ -100,7 +100,7 @@ var MovieListScreen = React.createClass({
 	selectRow: function(row){
 		var navigationController = Controllers.NavigationControllerIOS("movies_nav");
 		navigationController.push({
-			component: "ListViewSimpleExample", // the unique ID registered with AppRegistry.registerComponent (required)
+			component: "PostScreen", // the unique ID registered with AppRegistry.registerComponent (required)
 			backButtonTitle: "", // override the nav bar back button title for the pushed screen (optional)
 			backButtonHidden: false, // hide the nav bar back button for the pushed screen altogether (optional)
 			passProps: {content:row.content.rendered}
@@ -189,6 +189,6 @@ var styles = StyleSheet.create({
 });
 console.disableYellowBox = true;
 
-AppRegistry.registerComponent('MovieListScreen', () => MovieListScreen);
+AppRegistry.registerComponent('PostListScreen', () => PostListScreen);
 
-module.exports = MovieListScreen;
+module.exports = PostListScreen;
