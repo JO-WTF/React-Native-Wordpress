@@ -1,0 +1,28 @@
+dependencies: \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Views/RCTMapManager.m \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Views/RCTMapManager.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Views/RCTViewManager.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Base/RCTConvert.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Layout/Layout.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Views/RCTAnimationType.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Views/RCTComponent.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Base/RCTEventDispatcher.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Base/RCTJavaScriptExecutor.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Views/RCTConvert+CoreLocation.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Views/RCTConvert+MapKit.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Views/RCTMap.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Views/UIView+React.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Views/RCTMapAnnotation.h \
+  /Users/Joe/GitHub/wordpress/node_modules/react-native/React/Views/RCTMapOverlay.h
