@@ -41,9 +41,14 @@ Second Screen:
 Third Screen:
 	What to put?
 
-Clean up
+Clean up:
 	Delete js files;
 	Change file and class names;
+
+Plugins:
+	React Native htmlview: change styles
+	Wordpress oEmbed Gist: output raw code (or add it to functions.php)
+
 
 ## Instructions
 1. Install WP-API
