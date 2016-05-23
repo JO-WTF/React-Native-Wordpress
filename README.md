@@ -18,8 +18,7 @@ Plugins in use:
 First Screen:
 	Update API to fetch correct posts;
 	Article action buttons;
-	Image placeholder;
-	Display data published;
+	Display date published;
 	Show "Last one" at the end of list;
 	Sidebar;
 	Auto load when reaching the bottom?

@@ -1,6 +1,6 @@
 'use strict';
 require('./PostScreen'); // help the react bundler understand we want this file included
-
+var api = require("../config.js");
 var React = require('react');
 var ReactNative = require('react-native');
 var {
@@ -23,7 +23,7 @@ var {
 	ControllerRegistry,
 	Constants
 } = Controllers;
-var RefreshableListView = require("./Components/RefreshableListView");
+var RefreshableListView = require("../Components/RefreshableListView");
 // var ActivityView = require("react-native-activity-view");
 
 
@@ -32,7 +32,7 @@ var PostListScreen = React.createClass({
 
 
 	componentDidMount: function() {
-		Controllers.NavigationControllerIOS("movies_nav").setLeftButtons([{
+		Controllers.NavigationControllerIOS("posts_nav").setLeftButtons([{
 			title: "Categories",
 			onPress: function() {
 				Controllers.DrawerControllerIOS("drawer").toggle({side:"left"});
@@ -45,20 +45,27 @@ var PostListScreen = React.createClass({
 		console.log(this.state);
 			return(
 			<View >
-				<TouchableHighlight underlayColor={'#f3f3f2'} onPress={()=>this.selectRow(row)}>
+
 					<View style={styles.articleContainer}>
 						<View style={styles.rowDetailsContainer}>
 
-								<Image resizeMode="cover" style={styles.featuredImage}
-									source={{uri: row.featured_image_url}}
-									 onLoadStart={() =>{console.log('start loading')}}
-									onLoadEnd={() => {console.log('loading finished')}}
-									/>
+
+
+								{row.featured_image_url ? <Image resizeMode="cover" style={styles.featuredImage}
+								source={{uri: row.featured_image_url}}
+								 onLoadStart={() =>{console.log('start loading')}}
+								onLoadEnd={() => {console.log('loading finished')}}
+								/> : null}
+
+
+								<TouchableHighlight underlayColor={'#f3f3f2'} onPress={()=>this.selectRow(row)}>
 								<Text style={styles.articleTitle}>
 										{row.title.rendered}
 									</Text>
+								</TouchableHighlight>
+
 								<Text style={styles.articleTime} >
-									Posted by {row.author_name}, Category: {row.category_name[0].name}
+									Posted by {row.author_name} in {row.category_name[0].name}
 								</Text>
 								<View style={styles.articleExcerpt}>
 								<HTMLView
@@ -67,13 +74,12 @@ var PostListScreen = React.createClass({
 								</View>
 							</View>
 						</View>
-					</TouchableHighlight>
 					<View style={styles.separator}/>
 					<View style={styles.articleActions}>
 						<Icon style={{flex:1}} name="share-alt" size={20} color="#0088CC" />
 						<Icon style={{flex:1}} name="thumbs-o-up" size={20} color="#0088CC" />
 						<Icon style={{flex:1}} name="star-o" size={20} color="#0088CC" />
-						<View style={{flexDirection:'row',justifyContent:'center',alignItems:'center'}}><Icon style={{flex:1}} name="external-link" size={20} color="#0088CC" /><Text style={{fontSize:15,color:'#0088CC'}}> Read More</Text></View>
+						<TouchableHighlight underlayColor={'#f3f3f2'} onPress={()=>this.selectRow(row)}><View style={{flexDirection:'row',justifyContent:'center',alignItems:'center'}}><Icon style={{flex:1}} name="external-link" size={20} color="#0088CC" /><Text style={{fontSize:15,color:'#0088CC'}}> Read More</Text></View></TouchableHighlight>
 
 
 
@@ -83,7 +89,7 @@ var PostListScreen = React.createClass({
 		},
 		listViewOnRefresh: function(page, callback){
 			var rowsData = [];
-			var REQUEST_URL = 'http://jo.wtf/wp-json/wp/v2/posts?per_page=10&order=asc&page='+page;
+			var REQUEST_URL = api.POST_URL;
 
 			fetch(REQUEST_URL)
 			.then((response) => response.json())
@@ -98,7 +104,7 @@ var PostListScreen = React.createClass({
 	},
 
 	selectRow: function(row){
-		var navigationController = Controllers.NavigationControllerIOS("movies_nav");
+		var navigationController = Controllers.NavigationControllerIOS("posts_nav");
 		navigationController.push({
 			component: "PostScreen", // the unique ID registered with AppRegistry.registerComponent (required)
 			backButtonTitle: "", // override the nav bar back button title for the pushed screen (optional)

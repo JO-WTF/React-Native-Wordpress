@@ -1364,7 +1364,7 @@ React.createElement(TabBarControllerIOS.Item,{title:'Recent Posts',icon:require(
 React.createElement(NavigationControllerIOS,{
 title:'Recent Posts',
 component:'PostListScreen',
-id:'movies_nav',
+id:'posts_nav',
 style:{statusBarTextColorScheme:'light',navBarBackgroundColor:'#0088CC',navBarTextColor:'#ffffff',navBarButtonColor:'#ffffff',drawUnderNavBar:false,drawUnderTabBar:true},__source:{fileName:_jsxFileName,lineNumber:35}})),
 
 
@@ -70245,7 +70245,7 @@ __d(554 /* ControllersExample/PostListScreen.js */, function(global, require, mo
 
 
 
-var _FontAwesome=require(555 /* react-native-vector-icons/FontAwesome */);var _FontAwesome2=babelHelpers.interopRequireDefault(_FontAwesome);require(666 /* ./PostScreen */);var React=require(381 /* react */);var ReactNative=require(12 /* react-native */);var AppRegistry=ReactNative.AppRegistry;var StyleSheet=ReactNative.StyleSheet;var Text=ReactNative.Text;var TouchableOpacity=ReactNative.TouchableOpacity;var TouchableHighlight=ReactNative.TouchableHighlight;var StatusBar=ReactNative.StatusBar;var Image=ReactNative.Image;var View=ReactNative.View;
+var _FontAwesome=require(555 /* react-native-vector-icons/FontAwesome */);var _FontAwesome2=babelHelpers.interopRequireDefault(_FontAwesome);require(666 /* ./View/PostScreen */);var React=require(381 /* react */);var ReactNative=require(12 /* react-native */);var AppRegistry=ReactNative.AppRegistry;var StyleSheet=ReactNative.StyleSheet;var Text=ReactNative.Text;var TouchableOpacity=ReactNative.TouchableOpacity;var TouchableHighlight=ReactNative.TouchableHighlight;var StatusBar=ReactNative.StatusBar;var Image=ReactNative.Image;var View=ReactNative.View;
 var HTMLView=require(669 /* react-native-htmlview */);
 
 
@@ -70264,7 +70264,7 @@ var PostListScreen=React.createClass({displayName:'PostListScreen',
 
 
 componentDidMount:function componentDidMount(){
-Controllers.NavigationControllerIOS("movies_nav").setLeftButtons([{
+Controllers.NavigationControllerIOS("posts_nav").setLeftButtons([{
 title:"Categories",
 onPress:function onPress(){
 Controllers.DrawerControllerIOS("drawer").toggle({side:"left"});}}]);},
@@ -70330,7 +70330,7 @@ done();},
 
 
 selectRow:function selectRow(row){
-var navigationController=Controllers.NavigationControllerIOS("movies_nav");
+var navigationController=Controllers.NavigationControllerIOS("posts_nav");
 navigationController.push({
 component:"ListViewSimpleExample",
 backButtonTitle:"",
@@ -83574,7 +83574,7 @@ tabIndex:0});},
 
 onSwitchByIdClick:function onSwitchByIdClick(){
 Controllers.TabBarControllerIOS("main").switchTo({
-contentId:"movies_nav",
+contentId:"posts_nav",
 contentType:"NavigationControllerIOS"});},
 
 
@@ -83586,7 +83586,7 @@ badge:badgeCounter++});},
 
 onBadgeByIdClick:function onBadgeByIdClick(){
 Controllers.TabBarControllerIOS("main").setBadge({
-contentId:"movies_nav",
+contentId:"posts_nav",
 contentType:"NavigationControllerIOS",
 badge:badgeCounter++});},
 
@@ -83789,7 +83789,7 @@ Controllers.NavigationControllerIOS("favorites_nav").pop();},
 onButtonClick:function onButtonClick(cmd){
 switch(cmd){
 case 'plain':
-require(666 /* ./PostScreen */);
+require(666 /* ./View/PostScreen */);
 Controllers.NavigationControllerIOS("favorites_nav").push({
 title:"Pushed screen",
 component:"PostScreen",

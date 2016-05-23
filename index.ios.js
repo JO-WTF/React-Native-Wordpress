@@ -12,10 +12,10 @@ var {
 } = React;
 
 // require all top level react components you refer to in the layout
-require('./SideMenu');
-require('./PostListScreen');
-require('./SearchScreen');
-require('./FavoritesScreen');
+require('./View/SideMenu');
+require('./View/PostListScreen');
+require('./View/SearchScreen');
+require('./View/FavoritesScreen');
 
 var RNWordpress = Controllers.createClass({
 
@@ -31,7 +31,7 @@ var RNWordpress = Controllers.createClass({
             <NavigationControllerIOS
               title="Recent Posts"
               component="PostListScreen"
-              id="movies_nav"
+              id="posts_nav"
               style={{statusBarTextColorScheme:'light',navBarBackgroundColor: '#0088CC',navBarTextColor: '#ffffff',navBarButtonColor:'#ffffff', drawUnderNavBar: false, drawUnderTabBar: true}}
             />
           </TabBarControllerIOS.Item>
