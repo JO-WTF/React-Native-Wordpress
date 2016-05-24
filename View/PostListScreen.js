@@ -51,7 +51,7 @@ var PostListScreen = React.createClass({
 
 
 
-								{row.featured_image_url ? <Image resizeMode="cover" style={styles.featuredImage}
+								{row.featured_media>0? <Image resizeMode="cover" style={styles.featuredImage}
 								source={{uri: row.featured_image_url}}
 								 onLoadStart={() =>{console.log('start loading')}}
 								onLoadEnd={() => {console.log('loading finished')}}

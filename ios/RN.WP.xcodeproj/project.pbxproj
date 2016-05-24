@@ -24,6 +24,10 @@
 		89F194BB14E3483FA40052F4 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A3B4BB77CA94CD7BD8BE0D6 /* Zocial.ttf */; };
 		BC929C713C9A4CFA8974D9D8 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 89B95FFA15234B909B406D42 /* Octicons.ttf */; };
 		CC8006F21C7FBB6B00A9E411 /* libReactNativeControllers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC8006F11C7FBB3E00A9E411 /* libReactNativeControllers.a */; };
+		D8307A281CF3C8B3000A91E5 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = D8307A0C1CF3C68C000A91E5 /* main.jsbundle */; };
+		D8307A2A1CF3C96C000A91E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8307A291CF3C96C000A91E5 /* Images.xcassets */; };
+		D8307A2C1CF3C982000A91E5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8307A2B1CF3C982000A91E5 /* Info.plist */; };
+		D8307A2F1CF3C993000A91E5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8307A2D1CF3C993000A91E5 /* LaunchScreen.xib */; };
 		D8FE5D4C1CF3B46E0060D9D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FE5D4A1CF3B46E0060D9D4 /* AppDelegate.m */; };
 		D8FE5D4D1CF3B46E0060D9D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FE5D4B1CF3B46E0060D9D4 /* main.m */; };
 		E28B918E435046AF8C9C2EDD /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F93F6C9E0A44A268D2B8771 /* FontAwesome.ttf */; };
@@ -148,6 +152,10 @@
 		9F93F6C9E0A44A268D2B8771 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		B932F9B2CF8647C2B8208F7C /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		CC8006E21C7FBB3E00A9E411 /* ReactNativeControllers.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeControllers.xcodeproj; path = "../node_modules/react-native-controllers/ios/ReactNativeControllers.xcodeproj"; sourceTree = "<group>"; };
+		D8307A0C1CF3C68C000A91E5 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
+		D8307A291CF3C96C000A91E5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = wordpress/Images.xcassets; sourceTree = "<group>"; };
+		D8307A2B1CF3C982000A91E5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = wordpress/Info.plist; sourceTree = "<group>"; };
+		D8307A2E1CF3C993000A91E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = wordpress/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D85DD8B8514B47109C2AEDF2 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		D8FE5D4A1CF3B46E0060D9D4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = wordpress/AppDelegate.m; sourceTree = "<group>"; };
 		D8FE5D4B1CF3B46E0060D9D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = wordpress/main.m; sourceTree = "<group>"; };
@@ -279,6 +287,10 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				D8307A2D1CF3C993000A91E5 /* LaunchScreen.xib */,
+				D8307A2B1CF3C982000A91E5 /* Info.plist */,
+				D8307A291CF3C96C000A91E5 /* Images.xcassets */,
+				D8307A0C1CF3C68C000A91E5 /* main.jsbundle */,
 				D8FE5D4A1CF3B46E0060D9D4 /* AppDelegate.m */,
 				D8FE5D4B1CF3B46E0060D9D4 /* main.m */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -542,12 +554,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8307A281CF3C8B3000A91E5 /* main.jsbundle in Resources */,
+				D8307A2A1CF3C96C000A91E5 /* Images.xcassets in Resources */,
 				478C8ED10E124B73870D1F25 /* Entypo.ttf in Resources */,
 				3256D4DE4C91431687A2F040 /* EvilIcons.ttf in Resources */,
+				D8307A2F1CF3C993000A91E5 /* LaunchScreen.xib in Resources */,
 				E28B918E435046AF8C9C2EDD /* FontAwesome.ttf in Resources */,
 				E7AAE932FC5A4DE089ED8064 /* Foundation.ttf in Resources */,
 				F574AECFC0DE4FB797FFA395 /* Ionicons.ttf in Resources */,
 				8489CEA368BA4E7CAFAAEA47 /* MaterialIcons.ttf in Resources */,
+				D8307A2C1CF3C982000A91E5 /* Info.plist in Resources */,
 				BC929C713C9A4CFA8974D9D8 /* Octicons.ttf in Resources */,
 				89F194BB14E3483FA40052F4 /* Zocial.ttf in Resources */,
 			);
@@ -558,7 +574,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -566,7 +582,7 @@
 			name = "Bundle React Native code and images";
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = ". ~/.nvm/nvm.sh; nvm use node\n../node_modules/react-native/packager/react-native-xcode.sh";
 		};
@@ -583,6 +599,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D8307A2D1CF3C993000A91E5 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8307A2E1CF3C993000A91E5 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
@@ -716,6 +743,7 @@
 				INFOPLIST_FILE = wordpress/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = wordpress;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
