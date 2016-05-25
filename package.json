@@ -6,17 +6,20 @@
     "start": "node node_modules/react-native/local-cli/cli.js start"
   },
   "dependencies": {
-		"react-native-cli": "^0.2.0",
     "react": "0.14.5",
     "react-native": "0.25.1",
     "react-native-activity-view": "^0.2.9",
+    "react-native-cli": "^0.2.0",
     "react-native-controllers": "latest",
     "react-native-gifted-listview": "0.0.15",
     "react-native-htmlview": "git+https://git@github.com/blackbing/react-native-htmlview.git#master",
-    "react-native-vector-icons": "^2.0.2",
-		"react-native-refreshable-listview": "^1.3.0"
-
+    "react-native-keyboard-aware-scroll-view": "0.0.7",
+    "react-native-keyboard-spacer": "^0.2.0",
+    "react-native-overlay": "^0.4.2",
+    "react-native-parallax-scroll-view": "^0.18.2",
+    "react-native-parallax-view": "^2.0.4",
+    "react-native-timeago": "^0.3.0",
+    "react-native-vector-icons": "^2.0.2"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }

@@ -28,17 +28,12 @@ It is not finished yet.
 
 ####First Screen:
 
-*	Update API to fetch correct posts;
-
 *	Article action buttons;
-
-*	Display date published;
-
-*	Show "Last one" at the end of list;
 
 *	Sidebar;
 
 *	Auto load when reaching the bottom?
+
 
 
 ####Post Screen:
@@ -47,17 +42,13 @@ It is not finished yet.
 
 *	Right sidebar (with what?);
 
-*	Post title;
-
-*	Post meta;
-
 *	Deal with links;
 
 *	Deal with images;
 
 *	Deal with code;
 
-*	Comment list;
+*	Comment list styles
 
 *	Article actions: comment, share, add to favorites;
 
@@ -72,8 +63,6 @@ It is not finished yet.
 ####Clean up:
 
 *	Delete js files;
-
-*	Change file and class names;
 
 
 ####Plugins:

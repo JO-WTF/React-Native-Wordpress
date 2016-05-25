@@ -1,0 +1,131 @@
+'use strict';
+
+var React = require('react');
+var ReactNative = require('react-native');
+import ParallaxScrollView from 'react-native-parallax-scroll-view';
+
+var {
+	AppRegistry,
+	Image,
+	ListView,
+	TouchableHighlight,
+	StyleSheet,
+	RecyclerViewBackedScrollView,
+	Text,
+	ScrollView,
+	View,
+	Dimensions,
+} = ReactNative;
+const window = Dimensions.get('window');
+
+var GiftedListView = require('react-native-gifted-listview');
+var HTMLView = require('react-native-htmlview')
+
+var PostScreen = React.createClass({
+
+  render() {
+		var dateOptions = {
+		year: 'numeric', month: 'numeric', day: 'numeric',
+		hour: 'numeric', minute: 'numeric', second: 'numeric',
+		hour12: false
+		};
+		var date=new Date(this.props.date);
+		var postDate=date.toLocaleString('en-US', dateOptions);
+    return (
+			<View>
+				<ParallaxScrollView
+					style={{ flex: 1, backgroundColor: 'hotpink', overflow: 'hidden' }}
+					renderBackground={() => <Image source={{ uri: this.props.featured_image_url, width: window.width, height: 150 }}>
+
+					</Image>
+				}
+					renderFixedHeader={() =>							<View style={{flexDirection:'row',flex:1,alignItems:'center'}}><View style={{height:100}}><Text style={styles.postTitle}>{this.props.title} </Text></View></View>
+ }
+					parallaxHeaderHeight={ 150 }>
+
+
+											<View style={styles.container}>
+												<Text style={styles.postDate}>{postDate}</Text>
+												<Text style={styles.postMeta}>{this.props.author} published in {this.props.category[0].name}</Text>
+											</View>
+						<HTMLView
+								value={this.props.content}
+								stylesheet={styles}
+								onLinkPress={(url) => console.log('clicked link: ', url)}
+						/>
+				</ParallaxScrollView>
+				</View>
+    );
+  }
+});
+
+
+
+var styles = {
+
+	postTitle: {
+		flex: 1,
+		fontSize: 18,
+		textAlign: 'center',
+		backgroundColor:'rgba(99,99,99,0.5)',
+		color: 'white',
+		alignItems:'flex-end'
+	},
+	backdrop: {
+    paddingTop: 60,
+    width: 320,
+    height: 120
+  },
+  backdropView: {
+		opacity:0,
+		flex:1,
+		flexDirection:'row',
+  },
+	postDate: {
+		fontSize:13,
+		textAlign:'center',
+		color: '#333333',
+		backgroundColor:'rgba(255,0,0,0)'
+		margin:5
+	},
+	postMeta: {
+		fontSize:13,
+		textAlign:'center',
+		color: '#333333',
+		marginBottom:20
+	},
+	a: {
+    fontWeight: '300',
+    color: 'red', // pink links
+  },
+	code: {
+			backgroundColor:'cccccc',
+			color:'#eeeeee',
+		marginHorizontal:5,
+	},
+	pre: {
+			backgroundColor:'#222222',
+			color:'#eeeeee',
+			fontSize:12,
+	},
+	h1: {
+		color:'green',
+	},
+  container: {
+    flex: 1,
+    backgroundColor: '#F5FCFF',
+		paddingHorizontal:15
+  },
+  navBar: {
+    height: 64,
+    backgroundColor: '#CCC'
+  },
+  row: {
+    padding: 10,
+    height: 44,
+  },
+};
+
+AppRegistry.registerComponent('PostScreen', () => PostScreen);
+
+module.exports = PostScreen;

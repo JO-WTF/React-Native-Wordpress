@@ -18,7 +18,6 @@ require('./View/SearchScreen');
 require('./View/FavoritesScreen');
 
 var RNWordpress = Controllers.createClass({
-
   render: function() {
     return (
       <DrawerControllerIOS id="drawer"
@@ -41,6 +40,9 @@ var RNWordpress = Controllers.createClass({
               component="FavoritesScreen"
               id="favorites_nav"
               passProps={{hidePop: true}}
+							onPress={() => {
+								console.log('this clicked.');
+							}}
               style={{drawUnderNavBar: true, navBarTranslucent: true}}
             />
           </TabBarControllerIOS.Item>

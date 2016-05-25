@@ -24,6 +24,7 @@
 		89F194BB14E3483FA40052F4 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A3B4BB77CA94CD7BD8BE0D6 /* Zocial.ttf */; };
 		BC929C713C9A4CFA8974D9D8 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 89B95FFA15234B909B406D42 /* Octicons.ttf */; };
 		CC8006F21C7FBB6B00A9E411 /* libReactNativeControllers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC8006F11C7FBB3E00A9E411 /* libReactNativeControllers.a */; };
+		D800BF461CF5DD9700DC6BE4 /* libRNOverlay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D800BF451CF5DD8200DC6BE4 /* libRNOverlay.a */; };
 		D8307A281CF3C8B3000A91E5 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = D8307A0C1CF3C68C000A91E5 /* main.jsbundle */; };
 		D8307A2A1CF3C96C000A91E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8307A291CF3C96C000A91E5 /* Images.xcassets */; };
 		D8307A2C1CF3C982000A91E5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8307A2B1CF3C982000A91E5 /* Info.plist */; };
@@ -113,6 +114,13 @@
 			remoteGlobalIDString = D8AFADBD1BEE6F3F00A4592D;
 			remoteInfo = ReactNativeControllers;
 		};
+		D800BF441CF5DD8200DC6BE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D800BF401CF5DD8200DC6BE4 /* RNOverlay.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNOverlay;
+		};
 		D881B78B1CF0F20B006A6D0D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8743951998CE43029E623BFC /* ActivityView.xcodeproj */;
@@ -152,6 +160,7 @@
 		9F93F6C9E0A44A268D2B8771 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		B932F9B2CF8647C2B8208F7C /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		CC8006E21C7FBB3E00A9E411 /* ReactNativeControllers.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeControllers.xcodeproj; path = "../node_modules/react-native-controllers/ios/ReactNativeControllers.xcodeproj"; sourceTree = "<group>"; };
+		D800BF401CF5DD8200DC6BE4 /* RNOverlay.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNOverlay.xcodeproj; path = "../node_modules/react-native-overlay/RNOverlay.xcodeproj"; sourceTree = "<group>"; };
 		D8307A0C1CF3C68C000A91E5 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		D8307A291CF3C96C000A91E5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = wordpress/Images.xcassets; sourceTree = "<group>"; };
 		D8307A2B1CF3C982000A91E5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = wordpress/Info.plist; sourceTree = "<group>"; };
@@ -166,6 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D800BF461CF5DD9700DC6BE4 /* libRNOverlay.a in Frameworks */,
 				CC8006F21C7FBB6B00A9E411 /* libReactNativeControllers.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
@@ -259,6 +269,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				D800BF401CF5DD8200DC6BE4 /* RNOverlay.xcodeproj */,
 				CC8006E21C7FBB3E00A9E411 /* ReactNativeControllers.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -313,6 +324,14 @@
 			isa = PBXGroup;
 			children = (
 				CC8006F11C7FBB3E00A9E411 /* libReactNativeControllers.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D800BF411CF5DD8200DC6BE4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D800BF451CF5DD8200DC6BE4 /* libRNOverlay.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -444,6 +463,10 @@
 					ProjectRef = CC8006E21C7FBB3E00A9E411 /* ReactNativeControllers.xcodeproj */;
 				},
 				{
+					ProductGroup = D800BF411CF5DD8200DC6BE4 /* Products */;
+					ProjectRef = D800BF401CF5DD8200DC6BE4 /* RNOverlay.xcodeproj */;
+				},
+				{
 					ProductGroup = D881B7981CF0F20B006A6D0D /* Products */;
 					ProjectRef = 27B89AA52BFD4AD5AEC6658C /* RNVectorIcons.xcodeproj */;
 				},
@@ -533,6 +556,13 @@
 			remoteRef = CC8006F01C7FBB3E00A9E411 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		D800BF451CF5DD8200DC6BE4 /* libRNOverlay.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNOverlay.a;
+			remoteRef = D800BF441CF5DD8200DC6BE4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		D881B78C1CF0F20B006A6D0D /* libActivityView.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -574,7 +604,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
@@ -582,7 +612,7 @@
 			name = "Bundle React Native code and images";
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = ". ~/.nvm/nvm.sh; nvm use node\n../node_modules/react-native/packager/react-native-xcode.sh";
 		};
